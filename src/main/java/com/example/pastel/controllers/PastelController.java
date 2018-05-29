@@ -53,14 +53,20 @@ public class PastelController {
 	@PutMapping
 	public Pastel updatePastel(@RequestBody Pastel pastel) throws Exception {
 
+		List<Pastel> pasteisAux = new ArrayList<>();		
+		
 		if (pastel.getId() <= 0)
 			throw new Exception("Opa! Id inv�lido");
 
 		for (Pastel past : pasteis) {
 			if (past.getId() == pastel.getId()) {
-				past = pastel;
+				pasteisAux.add(pastel);
+			} else {
+				pasteisAux.add(past);
 			}
 		}
+		
+		pasteis = pasteisAux;
 
 		return pastel;
 	}
