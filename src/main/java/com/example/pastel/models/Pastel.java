@@ -11,6 +11,16 @@ public class Pastel {
 	private String descricao;
 	
 	private double preco;
+	
+	private Long qtde;	
+
+	public Long getQtde() {
+		return qtde;
+	}
+
+	public void setQtde(Long qtde) {
+		this.qtde = qtde;
+	}
 
 	public Long getId() {
 		return id;
