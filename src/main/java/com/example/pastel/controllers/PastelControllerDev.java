@@ -17,7 +17,7 @@ import com.example.pastel.models.Pastel;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/pastel-hml")
+@RequestMapping("/pastel-dev")
 public class PastelControllerDev {
 
 	private static List<Pastel> pasteis = new ArrayList<>();
